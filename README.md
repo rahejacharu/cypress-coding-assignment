@@ -19,7 +19,6 @@ Clone the repository to your local machine:
 git clone https://github.com/rahejacharu/cypress-coding-assignment.git
 
 🔹 2. Install Dependencies
-Navigate to the project directory and install dependencies:
  Navigate to the project directory and install the necessary dependencies:
 
   cd cypress-coding-assignment  
@@ -37,8 +36,8 @@ Navigate to the project directory and install dependencies:
 
   This will open the Cypress Test Runner where you can select specific tests to run.
 
- 
-  ---
+
+ ---
 
 
 ## ** Project Structure & Approach**
