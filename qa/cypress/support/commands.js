@@ -23,3 +23,33 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+Cypress.Commands.add('linkchecker', (links) => {
+
+    links.each(($link) => {
+        const url = $link.prop('href')
+      
+
+        if (url && url.startsWith('http')) {
+           
+            cy.request(
+                {
+                    url: url,
+                    failOnStatusCode: false,
+                    headers: {
+                        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/91.0.4472.124 Safari/537.36'
+                      }
+                }).then((res) =>
+                    expect(res.status).to.be.lessThan(400)
+                )
+            
+    }
+    
+     
+
+
+
+    })
+
+})
+

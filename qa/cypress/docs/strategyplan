@@ -1,0 +1,56 @@
+HOMEPAGE
+it("Should clearly state the organization's mission or tagline");
+it("Should load successfully without console errors");
+it("Should have a working top navigation menu with key pages");
+it("Should highlight the active page correctly in the navigation");
+it("Should display a consistent and visually correct UI layout")
+it("Should have visible 'Adopt', 'Donate', 'Our Services', and 'Volunteer at CAT' buttons or links above the fold");
+it("Should include a prominent 'Donate Today' CTA on the homepage");
+it("Should have working CTAs that navigate to adoption, donation, and volunteering flows");
+it("Should have all header and footer links working");
+it("Should display the 'Cat News & Happenings' section on the homepage");
+
+DONATEPAGE
+it("Should load successfully without console errors");
+it("Should load successfully without console errors");
+it("Should display a consistent and visually correct UI layout")
+it("should clearly display donation messaging — explain how funds help (trust building)");
+it("Should allow offer preset amounts and allow custom donation")
+it("Should have 'Monthly giving' and 'Other way to Give' options")
+it("One time and Monthly Options should work correctly")
+it("Should be able to collect user info after choosing the amount and option")
+it("All payment options should work card,paypal bank transfers ")
+it("should be able to successfully make the payment after choosing the desired payment option")
+it("Should send a thank-you email and message post donation")
+
+ADOPTACAT
+
+it("Should display Adoption Process and Adoption Fees Options")
+it("Should load successfully without console errors");
+it("Should display Cats with their image ,name and gender")
+it("Should display a consistent and visually correct UI layout")
+it("Filter like location,sex,age etc should filter the results")
+it("Should have a working search field to find cats by name or keyword");
+it("Should have content explaining the overall adoption process")
+it("Should load the page successfully on desktop and mobile");
+it("Should navigate to https://adopt.adopets.com/ when any cat card is clicked");
+it("Should allow the user to complete the adoption process successfully after payment");
+
+ADOPTIONFEES
+
+it("Should load successfully without console errors");
+it("Should display the required information about adoption and fees information");
+it("should have How to adopt and Adoption Policies buttons")
+
+
+ADOPTIONPOLICIES
+it("Should load successfully without console errors");
+it("Should contain 'Adoption Fees' and 'How to Adopt' buttons with correct navigation to respective pages");
+it("Should contain and display the required adoption policy information (e.g., eligibility, home visit, requirements")
+
+
+
+
+
+MENUNAVIGATION
+it("Should properly navigate to all the menus and submenu options and page should render correctly");
