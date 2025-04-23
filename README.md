@@ -22,21 +22,26 @@ git clone https://github.com/rahejacharu/cypress-coding-assignment.git
 Navigate to the project directory and install dependencies:
  Navigate to the project directory and install the necessary dependencies:
 
- cd cypress-coding-assignment  
- cd qa
- npm install
+  cd cypress-coding-assignment  
+  cd qa
+  npm install
 
 🔹 3. Run Tests via Command Line 
- Run the tests through the command line:
+    Run the tests using:
+     npx cypress run
+
 
 🔹 4. Run Tests via Cypress UI
+   Launch the Cypress Test Runner with:
+     npx cypress open
+
   This will open the Cypress Test Runner where you can select specific tests to run.
 
  
   ---
 
 
-## **Code Structure**
+## ** Project Structure & Approach**
 
 🧱 Code Structure-
 
