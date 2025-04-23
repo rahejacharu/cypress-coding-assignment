@@ -26,11 +26,14 @@ Navigate to the project directory and install dependencies:
  cd qa
  npm install
 
- 🔹 3. Run Tests via Command Line 
+🔹 3. Run Tests via Command Line 
  Run the tests through the command line:
 
 🔹 4. Run Tests via Cypress UI
   This will open the Cypress Test Runner where you can select specific tests to run.
+
+ 
+  ---
 
 
 ## **Code Structure**
@@ -50,11 +53,3 @@ The project is structured as follows:
 5.cypress/docs/strategyplan: Contains the high-level testing strategy for the assignment.
 
 
-
-Test Execution
-Running Tests:
-Command Line:
-Use npx cypress run to run all tests from the command line.
-
-UI Mode:
-Use npx cypress open to open the Cypress UI, where you can select individual tests to run.
