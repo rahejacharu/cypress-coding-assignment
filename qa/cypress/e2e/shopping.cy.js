@@ -10,9 +10,7 @@ describe('Shopping Cart', () => {
       const actualItem = $itemName.text().trim();
       cy.log(`Selected Item: ${actualItem}`);
       cy.wrap($itemName).click();
-
       Item.clickAddToCart();
-
       Cart.checkAddedItemText().then(($addedItemName) => {
         const expectedItem = $addedItemName.text().trim();
         expect(expectedItem).to.equal(actualItem);
@@ -20,3 +18,4 @@ describe('Shopping Cart', () => {
     });
   });
 });
+

@@ -8,7 +8,6 @@ describe('Search Hoodie Products', () => {
   it('should fail - incorrect assertion on hoodie search', function () {
     cy.visit('/');
     Search.clickSearchIcon();
-
     cy.get('@data').then((data) => {
       Search.enterTextInSearchField(data.searchitem1);
       cy.contains('No results found').should('be.visible');
@@ -18,10 +17,8 @@ describe('Search Hoodie Products', () => {
   it('should pass - all hoodie search results contain "hoodie" or "crewneck"', function () {
     cy.visit('/');
     Search.clickSearchIcon();
-
     cy.get('@data').then((data) => {
       Search.enterTextInSearchField(data.searchitem1);
-
       Search.checkSearchResult().each(($el) => {
         const title = $el.text().trim().toLowerCase();
         expect(

@@ -27,16 +27,16 @@
 Cypress.Commands.add('linkchecker', (links, expectedCount, expectedlist) => {
     let validUrlCount = 0;
     let actualList = [];
-  
+    
     links.each(($link) => {
       if ($link.children().length === 0) {
         actualList.push($link.text().trim());
       } else {
         actualList.push($link.children().text().trim());
       }
-  
+    
       const href = $link.prop('href');
-  
+    
       if (href && href.startsWith('http')) {
         validUrlCount++;
         cy.request({
@@ -48,7 +48,7 @@ Cypress.Commands.add('linkchecker', (links, expectedCount, expectedlist) => {
       if (expectedCount !== undefined) {
         expect(validUrlCount).to.equal(expectedCount);
       }
-  
+    
       if (expectedlist) {
         expect(actualList).to.deep.equal(expectedlist);
       }
