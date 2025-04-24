@@ -1,53 +1,17 @@
-class itemdeatilpage {
-
+class ItemDetailPage {
     elements = {
-
-        addtocart: () => cy.get('button.product-form__submit'),
-        footerlinks: () => cy.get('.footer a'),
-        items: () => cy.get('ul.product-grid h3.h5 a'),
-        itemname:()=>cy.get(' div .product__title h1')
-    }
-
-
-
-
+      addToCart: () => cy.get('button.product-form__submit'),
+      itemName: () => cy.get('div .product__title h1'),
+    };
+  
     clickAddToCart() {
-
-        this.elements.addtocart().click();
-
+      this.elements.addToCart().click();
     }
-
-    itemName()
-    {
-        return this.elements.itemname();
+  
+    itemName() {
+      return this.elements.itemName();
     }
-
-
-
-}
-
-
-module.exports = new itemdeatilpage();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  }
+  
+  module.exports = new ItemDetailPage();
+  

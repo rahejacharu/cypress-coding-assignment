@@ -1,31 +1,22 @@
-class searchpage {
-
+class SearchPage {
     elements = {
-
-       searchicon:()=>cy.get('summary.header__icon--search'),
-       inputsearch:()=>cy.get('input.search__input'),
-       searchresult:()=>cy.get('.card__information .h5 a')
-        
+      searchIcon: () => cy.get('summary.header__icon--search'),
+      inputSearch: () => cy.get('input.search__input'),
+      searchResult: () => cy.get('.card__information .h5 a'),
+    };
+  
+    clickSearchIcon() {
+      return this.elements.searchIcon().click();
     }
-
-    clickSearchIcon()
-    {
-       return this.elements.searchicon().click()
+  
+    enterTextInSearchField(itemname) {
+      return this.elements.inputSearch().type(`${itemname}{enter}`);
     }
-
-    enterTextInSearchField()
-    {
-        return this.elements.inputsearch().type('hoodie{enter}')
+  
+    checkSearchResult() {
+      return this.elements.searchResult();
     }
-
-    checkSearchResult()
-    {
-        return this.elements.searchresult()
-    }
-
-
-
-
-
-}
-module.exports = new searchpage();
+  }
+  
+  module.exports = new SearchPage();
+  

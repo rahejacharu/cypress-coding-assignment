@@ -1,13 +1,18 @@
 import HomePage from '../../pages/homepage';
 
 describe("Header Navigation", () => {
-  it("Should validate all header links", () => {
-    cy.visit("/")
+  beforeEach(() => {
+    cy.fixture('itemDetails').as('data');
+  });
+
+  it("should validate all header links", () => {
+    cy.visit("/");
     HomePage.header().should('be.visible');
-    HomePage.checkHeaderLinks()
 
-  })
+    cy.get('@data').then((data) => {
+      cy.log('Expected Header List:', data.expectedheaderlist);
+      HomePage.checkHeaderLinks(data.expectedheadercount, data.expectedheaderlist);
+    });
+  });
+});
 
-
-
-})

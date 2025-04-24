@@ -1,26 +1,13 @@
-class cartpage {
-
+class CartPage {
     elements = {
-
-        cartitem:()=>cy.get('a.upcart-product-title-link'),
-     
-        
+      cartItem: () => cy.get('a.upcart-product-title-link'),
+    };
+  
+    checkAddedItemText() {
+      return this.elements.cartItem();
     }
-
-
-
-
-    checkAddedItemText()
-    {
-       return this.elements.cartitem()
-    }
-
-   
-
-
-
-
-
-
-}
-module.exports = new cartpage();
+  }
+  
+  module.exports = new CartPage();
+  
+  

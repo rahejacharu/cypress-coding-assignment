@@ -9,6 +9,7 @@ it("Should include a prominent 'Donate Today' CTA on the homepage");
 it("Should have working CTAs that navigate to adoption, donation, and volunteering flows");
 it("Should have all header and footer links working");
 it("Should display the 'Cat News & Happenings' section on the homepage");
+it("Should be fully responsive across devices")
 
 DONATEPAGE
 it("Should load successfully without console errors");
@@ -22,6 +23,7 @@ it("Should be able to collect user info after choosing the amount and option")
 it("All payment options should work card,paypal bank transfers ")
 it("should be able to successfully make the payment after choosing the desired payment option")
 it("Should send a thank-you email and message post donation")
+it("Should be fully responsive across devices")
 
 ADOPTACAT
 
@@ -32,21 +34,23 @@ it("Should display a consistent and visually correct UI layout")
 it("Filter like location,sex,age etc should filter the results")
 it("Should have a working search field to find cats by name or keyword");
 it("Should have content explaining the overall adoption process")
-it("Should load the page successfully on desktop and mobile");
 it("Should navigate to https://adopt.adopets.com/ when any cat card is clicked");
 it("Should allow the user to complete the adoption process successfully after payment");
+it("Should be fully responsive across devices")
 
 ADOPTIONFEES
 
 it("Should load successfully without console errors");
 it("Should display the required information about adoption and fees information");
 it("should have How to adopt and Adoption Policies buttons")
+it("Should be fully responsive across devices")
 
 
 ADOPTIONPOLICIES
 it("Should load successfully without console errors");
 it("Should contain 'Adoption Fees' and 'How to Adopt' buttons with correct navigation to respective pages");
 it("Should contain and display the required adoption policy information (e.g., eligibility, home visit, requirements")
+it("Should be fully responsive across devices")
 
 
 
@@ -54,3 +58,4 @@ it("Should contain and display the required adoption policy information (e.g., e
 
 MENUNAVIGATION
 it("Should properly navigate to all the menus and submenu options and page should render correctly");
+it("Should be fully responsive across devices")

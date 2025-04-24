@@ -1,0 +1,32 @@
+{
+  "searchitem1": "hoodie",
+  "searchitem2": "crewneck",
+  "expectedheaderlist": [
+    "faq",
+    "15/10 Foundation",
+    "tees",
+    "hoodies",
+    "crewnecks",
+    "hats",
+    "totes",
+    "clearance",
+    "gift ideas under $50",
+    "puzzles",
+    "stickers (decals)",
+    "license plate frame",
+    "magnet",
+    "towel",
+    "gift cards",
+    "clearance",
+    "contact us"
+  ],
+  "expectedheadercount": 17,
+  "expectedfooterlist": [
+    "15/10 Foundation",
+    "FAQs",
+    "Newsletter",
+    "Contact"
+  ],
+  "expectedfootercount": 4
+}
+

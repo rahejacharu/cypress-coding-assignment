@@ -24,32 +24,34 @@
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 
-Cypress.Commands.add('linkchecker', (links) => {
-
+Cypress.Commands.add('linkchecker', (links, expectedCount, expectedlist) => {
+    let validUrlCount = 0;
+    let actualList = [];
+  
     links.each(($link) => {
-        const url = $link.prop('href')
-      
-
-        if (url && url.startsWith('http')) {
-           
-            cy.request(
-                {
-                    url: url,
-                    failOnStatusCode: false,
-                    headers: {
-                        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/91.0.4472.124 Safari/537.36'
-                      }
-                }).then((res) =>
-                    expect(res.status).to.be.lessThan(400)
-                )
-            
-    }
-    
-     
-
-
-
-    })
-
-})
-
+      if ($link.children().length === 0) {
+        actualList.push($link.text().trim());
+      } else {
+        actualList.push($link.children().text().trim());
+      }
+  
+      const href = $link.prop('href');
+  
+      if (href && href.startsWith('http')) {
+        validUrlCount++;
+        cy.request({
+          url: href,
+          failOnStatusCode: false
+        }).its('status').should('be.lt', 400);
+      }
+    }).then(() => {
+      if (expectedCount !== undefined) {
+        expect(validUrlCount).to.equal(expectedCount);
+      }
+  
+      if (expectedlist) {
+        expect(actualList).to.deep.equal(expectedlist);
+      }
+    });
+  });
+  

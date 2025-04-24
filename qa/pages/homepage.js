@@ -1,69 +1,32 @@
-class homepage {
-
+class HomePage {
     elements = {
-
-        headerlinks: () => cy.get('a.header__menu-item') ,
-        footerlinks: () => cy.get('.menu-blocks a') ,
-        items: ()=> cy.get('h3.h5 a'),
-        footer:()=> cy.get('footer'),
-        header:()=> cy.get('header')
+      headerLinks: () => cy.get('a.header__menu-item'),
+      footerLinks: () => cy.get('.menu-blocks a'),
+      items: () => cy.get('h3.h5 a'),
+      footer: () => cy.get('footer'),
+      header: () => cy.get('header'),
+    };
+  
+    checkHeaderLinks(expectedcount, expectedheaderlist) {
+      cy.linkchecker(this.elements.headerLinks(), expectedcount, expectedheaderlist);
     }
-
-
-
-
-    checkHeaderLinks() {
-
-        cy.linkchecker(this.elements.headerlinks())
-
+  
+    checkFooterLinks(expectedcount, expectedfooterlist) {
+      cy.linkchecker(this.elements.footerLinks(), expectedcount, expectedfooterlist);
     }
-
-    checkFooterLinks() {
-
-        cy.linkchecker(this.elements.footerlinks())
-
+  
+    clickFirstItem() {
+      return this.elements.items().first();
     }
-
-    clickFirstItem()
-    {
-      return this.elements.items().first()
+  
+    footer() {
+      return this.elements.footer();
     }
-
-    footer()
-    {
-        return this.elements.footer()
+  
+    header() {
+      return this.elements.header();
     }
-
-    header()
-    {
-        return this.elements.header();
-
-    }
-
-}
-
-
-module.exports = new homepage();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  }
+  
+  module.exports = new HomePage();
+  
